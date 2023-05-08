@@ -11,7 +11,8 @@ function Contact() {
     <h2  className='contact-h2'>Get in touch</h2>
     <p  className='contact-p'>I'm interested in internship opportunities- especially opportunities that involves large projects. However, my inbox is always open if you have any questions or want to say hi.</p>
     <div className="form">
-        <form >
+        <form name='contact' method='post'>
+        <input type="hidden" name="form-name" value="contact" />
             <input type="text"  placeholder='Your Name'/>
             <input type="email"  placeholder='Your Email'/>
             <textarea className='textarea' name="" id="" cols="30" rows="10" placeholder='Your Message' ></textarea>
