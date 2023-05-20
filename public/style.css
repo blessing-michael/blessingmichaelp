@@ -42,10 +42,12 @@ variables
 }
 .portfolio-h1{
     color: #29AB87;
+    /* margin-top: 10rem; */
 
 }
 .portfolio-info{
     margin: 0 2rem;
+    
 
 }
 .portfolioIngo-p{
@@ -103,6 +105,7 @@ variables
 .nav-show{
     height: 0;
     overflow: hidden;
+    background-color: aliceblue;
     transition: all 0.3s ease-out;
     /* width: 50px; */
 }
@@ -115,6 +118,7 @@ variables
     top: 0;
     width: 70%;
     height: 100%;
+    /* background-color: aliceblue; */
     /* opacity: 0.3; */
 }
 .close-icon{
@@ -122,17 +126,28 @@ variables
     display: none;
 }
 .show-closeicon{
+    /* display: block; */
+    /* position: absolute; */
+    /* right: 10%; */
+    /* top: 5%; */
+    margin-left: 80%;
+    margin-top: 10%;
+    color: whitesmoke;
+    font-size: 1.8rem;
+
+}
+/* .show-closeicon{
     display: block;
     position: absolute;
     right: 10%;
     top: 5%;
     color: whitesmoke;
     font-size: 1.8rem;
-    /* transition: all 0.3s ease-out; */
+   
     
     
     
-}
+} */
 /* .show-closeicon:hover{
     rotate: -90deg;
 
@@ -142,7 +157,7 @@ variables
 
 }
 .link-element{
-    margin-top: 7rem;
+    margin-top: 4rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -181,7 +196,8 @@ variables
     padding: 0.7rem 1rem ;
     text-align: center;
     color: whitesmoke;
-    box-shadow: 2px 4px 4px #29AB87;
+    box-shadow: 2px 2px 4px rgba(20,200,145, .4);
+    /* box-shadow: 2px 4px 4px #29AB87; */
     border-radius: 5px;
 }
 .technical-skills{
@@ -215,7 +231,7 @@ height: auto;
     margin: 1rem 0;
     background: #000000;
     background: linear-gradient(to right,#000000, #434343);
-    box-shadow: 2px 2px 4px #29AB87;
+    box-shadow: 2px 2px 4px rgba(20,200,145, .4);
     border-radius: 5px;
 }
 .projectinf0-h2{
@@ -350,6 +366,20 @@ input{
 .contact-btn:hover{
     background-color: #29AB87;
 }
+.footer{
+    display: flex;
+    justify-content: center;
+    /* background-color: #29AB87; */
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+.footer-iconfooter{
+    /* background-color: #29AB87; */
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+}
 .footer-icon{
     display:flex;
     /* flex-direction: column; */
@@ -384,3 +414,222 @@ text-align: center;
     color:rgb(119, 116, 116);
 }
 /* END OF CONTACT */
+
+/* BEGINNING OF ARITICLES */
+
+.article-map{
+    color: whitesmoke;
+    margin: 4rem 0;
+    padding: 2rem 2rem;
+}
+.article-info{
+    background: #29AB87;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0;
+    background: #000000;
+    background: linear-gradient(to right,#000000, #434343);
+    box-shadow: 2px 2px 4px rgba(0,0,0, .3);
+    border-radius: 5px;
+}
+.articles-img{
+    max-width: 100%;
+    height: auto;
+    border-top:2px solid rgb(246, 214, 134);
+    
+}
+.article-h2{
+    color: rgb(246, 214, 134);
+    margin:1rem;
+    text-align: center;
+}
+.article-h3{
+    margin: 0 2rem;
+    color: whitesmoke;
+}
+.article-p{
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    color: rgb(164, 162, 162);
+
+    /* margin: 0.5rem ; */
+
+}
+
+/* END OF ARITICLES */
+
+@media only screen and (min-width:768px) {
+    /* BEGINNING OF HEADER STYLING */
+    .cv-btn{
+        border: 2px solid #29AB87;
+        padding: 0.7rem 1.5rem;
+        font-size: 1.2rem;
+        /* font-size: 1.; */
+
+    }
+    .header{
+        color: whitesmoke;
+        margin: 5rem 2rem;
+        /* background-color: #29AB87; */
+    }
+    .header-section{
+        margin: 0 3rem;
+    }
+    .header h1{
+      
+        font-size: 2.2rem;
+    
+    }
+    
+    .portfolio-h1{
+        font-size: 1.5rem;
+        /* margin-bottom: 0; */
+    }
+    .portfolioIngo-p{
+        font-size: 1.2rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+     
+       
+    }
+    .one{
+        font-size: 1.1rem;
+    }
+    .project-h2{
+        font-size: 1.5rem;
+
+    }
+  
+    /* END OF PORTFOLIO HEADER STYLING */
+
+
+    /*  BEGINNING OF NAVBAR STYLING */
+
+
+
+
+
+    .navbar{
+        display: none;
+    }
+    /* .show-container{
+        display: block;
+    } */
+    .nav-show{
+        height: 50rem;
+        /* overflow: hidden; */
+        transition: all 0.3s ease-out;
+        /* width: 50px; */
+    }
+    .show-closeicon{
+        /* display: none; */
+    }
+    .link-element{
+        /* margin-top: 7rem; */
+        display: flex;
+        margin-top: 0;
+        /* background-color: #29AB87; */
+        /* height: 5px; */
+        position: absolute;
+        top: 0%;
+        right: 5%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        margin-bottom: 0;
+
+        /* flex-direction: column; */
+        /* justify-content: center; */
+        /* align-items: center; */
+    
+    }
+    .logo{
+        position: absolute;
+        top: 4%;
+        left: 5%;
+        
+
+    }
+    .nav-show{
+        height: 0;
+        overflow: hidden;
+        background-color: aliceblue;
+        transition: all 0.3s ease-out;
+        /* width: 50px; */
+    } 
+    .header{
+        color: whitesmoke;
+         margin-top: 7rem; 
+       
+    }
+
+ 
+    .show-container{
+        background-color: #d7d2d2;
+    
+    }
+    .show-closeicon{
+        display: none;
+        background-color: aliceblue;
+    }
+
+    .footer-icon {
+        display: none;
+    }
+
+    
+    /* END OF HEADER STYLING */
+
+    /* BEGINNING OF FOOTER STYLING */
+    .footer{
+        display:flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+       
+
+    }
+    .footer-iconfooter{
+        /* background-color: #29AB87; */
+        display:flex;
+        justify-content: space-between; 
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        color: rgb(119, 116, 116);
+        font-size: 1.3rem;
+       
+        width: 400px;
+    }
+    .footer-p{
+        margin: 2rem 0;
+    font-size: 0.9rem;
+    color: rgb(119, 116, 116);
+    text-align: center;
+    }
+ 
+ 
+    .footer-span{
+        color: whitesmoke;
+    }
+    .footer-a{
+        color:rgb(119, 116, 116);
+    }
+     /* END OF FOOTER STYLING */
+
+     /* BEGINNIG OF PROJECT STYLING */
+     .project-parent{
+        
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+       
+    }
+    .project-info{
+        
+        margin: 1rem;
+    }
+     /* END OF PROJECT STYLING */
+    
+}

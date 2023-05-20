@@ -14,14 +14,18 @@ function Projects() {
   return (
     <section className="portfolio-section" id="project">
            <h2 className="project-h2">My Projects</h2>
+           <div className="project-parent">
+
+          
       {project.map((pro) => {
         const { id,title, img, info,text,technology} = pro;
-        console.log(title, img);
+        console.log(title, img); 
         return (<div className="project-info" key={id} onClick={Handletd}>
             <a className="project-link" href="https://question-display.netlify.app/"  target="_blank" rel="noopener noreferrer">
 
-          
-          <img src={img} alt="image" className="pro-img" />
+            {/* {console.log(img, "coming from article.....")} */}
+           
+            <img src={img} alt="image" className="pro-img" />
           <h2 className="projectinf0-h2">{title}</h2>
           <p className="projectinf0-h22">{info}</p>
             <h3 className="projectinf0-h3" >{text} <BsArrowDown  className="arrow"/></h3>
@@ -29,8 +33,10 @@ function Projects() {
             {technology} </p>
             </a>
         </div>
+        
         );
       })}
+       </div>
    
     </section>
     

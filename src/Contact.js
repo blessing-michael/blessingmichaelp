@@ -16,8 +16,8 @@ function Contact() {
       <div className="form">
         <form name="contact" method="post" action="/contact">
           <input type="hidden" name="form-name" value="contact" />
-          <input type="text" id="name" name="name" placeholder="Your Name" />
-          <input type="email" placeholder="Your Email" name="email" />
+          <input type="text" id="name" name="name" placeholder="Your Name" autoComplete="off" />
+          <input type="email" placeholder="Your Email" name="email"  autoComplete="off"/>
           <textarea
             className="textarea"
             name="message"

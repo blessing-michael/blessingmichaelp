@@ -42,12 +42,13 @@ function Nav() {
 
 
 
-    <div className={ ` ${showlinks?"nav-show show-container" : 'nav-show show-closeicon'}`}>
+    <div className={ ` ${showlinks?"nav-show show-container" : 'nav-show'}`}>
 
-        <div className="close-icon show-closeicon " onClick={closenav}>
-        <AiOutlineClose className='' />
+        <div className="" onClick={closenav}>
+        <AiOutlineClose className='show-closeicon' />
         </div>
         <ul className='link-element'>
+          
 
 
             <Link to="project" spy={true} smooth={true} offset={-60} duration={500}><li  className='li-element' onClick={closenav}>Projects</li></Link>
@@ -95,8 +96,7 @@ function Nav() {
           </a>
         </div>
             </div>
-            {/* <a href="#about"><li>About</li></a>
-            <li>Contact</li> */}
+            
         </ul>
     </div>
   </nav>

@@ -12,7 +12,7 @@ function Footer() {
       <div className="underline"></div>
 
       <div className="footer">
-        <div className="footer-icon">
+        <div className="footer-iconfooter">
           <a
             className="footer-a"
             href="https://github.com/blessing-michael?tab=repositories"

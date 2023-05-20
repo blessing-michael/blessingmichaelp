@@ -6,6 +6,7 @@ import About from './About'
 import Contact from './Contact'
 import Footer from './Footer'
 import Nav from './Nav'
+import Articles from './Articles'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
 <Nav/>
 <Header/>
 <Projects/>
+{/* <Articles/> */}
       
       <About/>
      <Contact/>
