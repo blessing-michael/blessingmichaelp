@@ -2,6 +2,7 @@ body{
     background: #000000;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to left, #000000 #434343);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right,#000000, #434343); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: 'poppins', sans-serif;
     
     
     /* background-color: black; */
@@ -199,12 +200,25 @@ variables
     box-shadow: 2px 2px 4px rgba(20,200,145, .4);
     /* box-shadow: 2px 4px 4px #29AB87; */
     border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     flex: 0 0 calc(30.66% - 10px);
+     margin: 0.5rem;
+    
 }
 .technical-skills{
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 1rem 2rem;
     gap: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  
     
 }
 /* END OF TECHNICAL SKILLS */
@@ -237,30 +251,30 @@ height: auto;
 .projectinf0-h2{
    
     margin-top: 2rem;
-    font-size: 1.5rem;
+    
 }
 .projectinf0-h22{
     margin-top: 0.5rem;
     color:#29AB87;
-    font-size: 1.2rem; 
+   
 }
 .projectinf0-h3{
    
     margin-top: 1rem;
-    font-size: 1.4rem;
+   
     text-transform: capitalize;
     
 }
 .projectinf0-p{
     text-align: sstart;
     margin-top: 1rem;
-    font-size: 1.3rem;
+   
     text-transform: capitalize;
 }
 .projectinf0-pp{
    
     margin: 1rem 0;
-    font-size: 1.2rem;
+   
     
     /* color: aqua; */
 }
@@ -305,6 +319,11 @@ height: auto;
     box-shadow: 2px 2px 4px rgba(0,0,0, .3);
 
 }
+.about p{
+    font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
 /* END OF ABOUT */
 
 /* BEGINNING OF CONTACT */
@@ -346,14 +365,14 @@ input{
     margin:1rem 0;
     background: transparent;
     text-transform: capitalize;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 0.9rem;
-    line-height: 1.6;
+  font-weight: 400;
+  line-height: 24px;
   
 }
 .contact-h2{
     text-transform: capitalize;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+   
+
 }
 .contact-btn{
     padding: 0.5rem 1rem;
@@ -463,6 +482,9 @@ text-align: center;
 
 @media only screen and (min-width:768px) {
     /* BEGINNING OF HEADER STYLING */
+    .li-element{
+        font-size: 1.1rem;
+    }
     .cv-btn{
         border: 2px solid #29AB87;
         padding: 0.7rem 1.5rem;
@@ -480,16 +502,16 @@ text-align: center;
     }
     .header h1{
       
-        font-size: 2.2rem;
+        font-size: 1.8rem;
     
     }
     
     .portfolio-h1{
-        font-size: 1.5rem;
+       
         /* margin-bottom: 0; */
     }
     .portfolioIngo-p{
-        font-size: 1.2rem;
+        font-size: 1rem;
         margin-top: 2rem;
         margin-bottom: 2rem;
      
@@ -497,6 +519,12 @@ text-align: center;
     }
     .one{
         font-size: 1.1rem;
+        display: flex;
+    flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     flex: 0 0 calc(36.66% - 20px);
+     margin: 0.5rem;
     }
     .project-h2{
         font-size: 1.5rem;
@@ -631,5 +659,56 @@ text-align: center;
         margin: 1rem;
     }
      /* END OF PROJECT STYLING */
+
+      /* BEGINNIG OF ABOUT STYLING */
+      .about{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .about-info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+      }
+      .about-info h2{
+        text-align: center;
+        margin: 0.5rem;
+
+      }
+      .about-col{
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 200px;
+      }
+
+      /* END OF ABOUT STYLING */
+
+       /* BEGINNIG OF 
+       
+       
+       STYLING */
+       .contact-paragraph{
+        margin: 1.5rem 7rem;
+       }
+       .contact-h2{
+        margin: 1rem 0;
+       }
+       input{
+        width: 60%;
+       }
+       .textarea{
+        width: 60%;
+        margin: 1rem 0;
+       }
+
+       
+      /* END OF ABOUT STYLING */
     
 }

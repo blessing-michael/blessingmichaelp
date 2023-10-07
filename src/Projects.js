@@ -26,9 +26,9 @@ function Projects() {
             {/* {console.log(img, "coming from article.....")} */}
            
             <img src={img} alt="image" className="pro-img" />
-          <h2 className="projectinf0-h2">{title}</h2>
+          <h3 className="projectinf0-h2">{title}</h3>
           <p className="projectinf0-h22">{info}</p>
-            <h3 className="projectinf0-h3" >{text} <BsArrowDown  className="arrow"/></h3>
+            <h4 className="projectinf0-h3" >{text} <BsArrowDown  className="arrow"/></h4>
             <p className="projectinf0-pp">
             {technology} </p>
             </a>

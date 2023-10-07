@@ -8,7 +8,10 @@ function About() {
             <div className="about-col">
             <p className='about-p'>Nice to meet you !</p>
         <h2>Hi there, I'm Blessing</h2>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis saepe animi, ea possimus laboriosam hic exercitationem nobis ex debitis reprehenderit corporis quasi consectetur pariatur officiis necessitatibus tenetur at eligendi accusamus culpa deleniti sapiente rerum magnam. Eos magnam possimus natus autem, ipsa modi repellendus soluta, debitis consectetur, rerum quibusdam cum vitae.</p>
+        <p> I’m a software developer! I can help you build a product ,
+              feature or website. Look through some of my work and experience!
+              If you like what you see and have a project you need coded, don’t
+              hesitate to contact me..</p>
 
             </div>
   

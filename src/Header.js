@@ -18,8 +18,8 @@ function Header() {
 
             </div>
             <div className="technical-skills">
-                <div className="one">Html</div>
-                <div className="one">Javascript</div>
+                <div className="one">HTML</div>
+                <div className="one">JavaScript</div>
                 <div className="one">CSS</div>
                 <div className="one">React js</div>
                 <div className="one">Git</div>

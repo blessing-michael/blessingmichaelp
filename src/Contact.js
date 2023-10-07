@@ -8,7 +8,7 @@ function Contact() {
     <section className="contact" id="contact">
       <p className="contact-p">what's next?</p>
       <h2 className="contact-h2">Get in touch</h2>
-      <p className="contact-p">
+      <p className="contact-paragraph">
         I'm interested in internship opportunities- especially opportunities
         that involves large projects. However, my inbox is always open if you
         have any questions or want to say hi.
@@ -26,10 +26,11 @@ function Contact() {
             rows="10"
             placeholder="Your Message"
           ></textarea>
-          <button className="contact-btn" type="submit">
+        
+        </form>
+        <button className="contact-btn" type="submit">
             Send Message <BsSend />
           </button>
-        </form>
       </div>
     </section>
   );
