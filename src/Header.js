@@ -5,13 +5,12 @@ function Header() {
   return (
     <div className='header-section'>
      
-        <header className='header'>
+        <header className='header' id="header">
             <h1>Hi,</h1>
             <h1>I'm Blessing</h1>
-            <h1> Front-End Developer</h1>
-            <button className='cv-btn'>Cv/Resume</button>
+            <h1 className='front-end'> Front-End Developer</h1>
             <a
-            className="footer-a nav-a"
+            className='cv-btn'
             href="https://docs.google.com/document/d/1Z2JSFpLZi3EJeBFBurkhdVcw5LoxzSnQhV2L3Q6lfJk/edit?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"

@@ -54,7 +54,15 @@ function Nav() {
             <Link to="project" spy={true} smooth={true} offset={-60} duration={500}><li  className='li-element' onClick={closenav}>Projects</li></Link>
             <Link to="about" spy={true} smooth={true} offset={-50} duration={500}><li className='li-element' onClick={closenav}>About</li></Link>
             <Link to="contact" spy={true} smooth={true} offset={-50} duration={500}><li className='li-element' onClick={closenav} >contact</li></Link>
-            <button className='li-btn'>Resume</button>
+            <a
+            
+            href="https://docs.google.com/document/d/1Z2JSFpLZi3EJeBFBurkhdVcw5LoxzSnQhV2L3Q6lfJk/edit?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+          <button className='li-btn'>Resume</button>
+          </a>
+            
             <div className="">
 
             <div className="footer-icon navlink-icon">

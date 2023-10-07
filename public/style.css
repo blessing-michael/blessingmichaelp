@@ -225,6 +225,7 @@ variables
 
 /* BEGINNING OF PROJECTS */
 .project-h2{
+    
 
 
 }
@@ -489,8 +490,12 @@ text-align: center;
         border: 2px solid #29AB87;
         padding: 0.7rem 1.5rem;
         font-size: 1.2rem;
+        text-decoration: none;
         /* font-size: 1.; */
 
+    }
+    .front-end{
+        margin-bottom: 3rem;
     }
     .header{
         color: whitesmoke;
