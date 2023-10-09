@@ -2,11 +2,38 @@ const projects= [
     {
         id: 1,
         // img: "../public/image/tastyDelights.PNG.Untracked",
-        title: "Tasty Delights",
-        info: "E-commerce site",
+        title: "BleFi Movies",
+        info: "Movie website",
         text: "Technology used",
-         technology: "HTML, CSS, React Js",
-         img: './image/delight.PNG',
+         technology: "HTML, CSS, JavaScript, webpack, kanban",
+         img: './image/blefi-news-snapshott.PNG',
+         lin: '',
+
+     
+
+    },
+    {
+        id: 1,
+        // img: "../public/image/tastyDelights.PNG.Untracked",
+        title: "Steven and Gerald Holdings",
+        info: "Companies Information website",
+        text: "Technology used",
+         technology: "HTML, CSS, JavaScript",
+         img: './image/steven-holdings.PNG',
+         lin: 'https://steven-and-gerald-holdings.netlify.app/',
+
+     
+
+    },
+    {
+        id: 1,
+        // img: "../public/image/tastyDelights.PNG.Untracked",
+        title: "Book-store",
+        info: " Book-store webpage",
+        text: "Technology used",
+         technology: "React.js",
+         img: './image/book-store-snapshot.PNG',
+         lin: 'https://book-store-6v7u.onrender.com/',
 
      
 
@@ -18,19 +45,7 @@ const projects= [
         info: "E-commerce site",
         text: "Technology used",
          technology: "HTML, CSS, React Js",
-         img: './image/delight.PNG',
-
-     
-
-    },
-    {
-        id: 1,
-        // img: "../public/image/tastyDelights.PNG.Untracked",
-        title: "Tasty Delights",
-        info: "E-commerce site",
-        text: "Technology used",
-         technology: "HTML, CSS, React Js",
-         img: './image/delight.PNG',
+         img: './image/blefi-news-snapshott.PNG',
 
      
 

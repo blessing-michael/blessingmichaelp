@@ -21,6 +21,7 @@ function App() {
       <About/>
      <Contact/>
      <Footer/>
+     
       {/* <Router> */}
      
       {/* <Routes> */}

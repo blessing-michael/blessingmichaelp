@@ -230,14 +230,21 @@ variables
 
 }
 .pro-img{
-    max-width: 100%;
+   max-width: 100%;
 height: auto;
+}
+.show-img-div{
+  
+    
+    
+    
 }
 .portfolio-section{
     color: whitesmoke;
     margin: 4rem 0;
     padding: 2rem 2rem;
 }
+
 .project-info{
     background: #29AB87;
     display: flex;
@@ -248,6 +255,7 @@ height: auto;
     background: linear-gradient(to right,#000000, #434343);
     box-shadow: 2px 2px 4px rgba(20,200,145, .4);
     border-radius: 5px;
+    
 }
 .projectinf0-h2{
    
@@ -712,6 +720,7 @@ text-align: center;
         width: 60%;
         margin: 1rem 0;
        }
+    
 
        
       /* END OF ABOUT STYLING */
