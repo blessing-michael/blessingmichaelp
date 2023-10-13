@@ -13,7 +13,7 @@ const projects= [
 
     },
     {
-        id: 1,
+        id: 2,
         // img: "../public/image/tastyDelights.PNG.Untracked",
         title: "Steven and Gerald Holdings",
         info: "Companies Information website",
@@ -26,7 +26,7 @@ const projects= [
 
     },
     {
-        id: 1,
+        id: 3,
         // img: "../public/image/tastyDelights.PNG.Untracked",
         title: "Book-store",
         info: " Book-store webpage",
@@ -39,25 +39,27 @@ const projects= [
 
     },
     {
-        id: 1,
+        id: 4,
         // img: "../public/image/tastyDelights.PNG.Untracked",
-        title: "Tasty Delights",
-        info: "E-commerce site",
+        title: "Forecast me",
+        info: "Weather Forecast site",
         text: "Technology used",
-         technology: "HTML, CSS, React Js",
-         img: './image/blefi-news-snapshott.PNG',
+         technology: "React Js",
+         img: './image/weather-snapshot.PNG',
+         lin: 'https://forecast-me-tbxm.onrender.com/',
 
      
 
     },
     {
-        id: 1,
+        id: 5,
         // img: "../public/image/tastyDelights.PNG.Untracked",
         title: "Tasty Delights",
         info: "E-commerce site",
         text: "Technology used",
-         technology: "HTML, CSS, React Js",
+         technology: "React Js",
          img: './image/delight.PNG',
+         lin: 'https://question-display.netlify.app/',
 
      
 
