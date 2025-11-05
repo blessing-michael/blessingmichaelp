@@ -572,7 +572,7 @@ input {
 
     .header-section {
         margin: 0 3rem;
-        background-color: #c0bdbd;
+        /* background-color: #c0bdbd; */
     }
 
     .header h1 {
