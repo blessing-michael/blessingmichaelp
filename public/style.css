@@ -1,11 +1,14 @@
 body {
-    background: #000000;
+    /* background: #000000; */
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #000000 #434343);
+    /* background: -webkit-linear-gradient(to left, #000000 #434343); */
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #000000, #434343);
+    /* background: linear-gradient(to right, #000000, #434343); */
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     font-family: 'poppins', sans-serif;
+    background-color: #111111;
+    background-color: #f8f6f3;
+
 
 
     /* background-color: black; */
@@ -34,10 +37,181 @@ variables
     margin: 0;
 }
 
+/* Hide default cursor */
+* {
+    cursor: none !important;
+}
+
+/* Center-follow dot */
+.cursor-dot {
+    width: 8px;
+    height: 8px;
+    background: #ffffff;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 10000;
+}
+
+/* Outer ring */
+.cursor-ring {
+    width: 38px;
+    height: 38px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.2s ease-out, border-color 0.2s ease-out;
+}
+
+/* Grow ring when hovering clickable */
+a:hover~.cursor-ring,
+button:hover~.cursor-ring {
+    transform: scale(1.6);
+    border-color: #29AB87;
+}
+
+.magnetic-btn,
+img {
+    will-change: transform;
+    transition: transform .25s cubic-bezier(.19, .68, .37, 1);
+}
+
+.floating-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.floating-particles span {
+    position: absolute;
+    display: block;
+    width: 8px;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.35);
+    /* background: var(--particle-color, #fdc14c); */
+
+    border-radius: 50%;
+    animation: floatUp 9s infinite ease-in-out;
+    opacity: 0.7;
+}
+
+/* Random placement */
+.floating-particles span:nth-child(1) {
+    left: 8%;
+    animation-duration: 11s;
+}
+
+.floating-particles span:nth-child(2) {
+    left: 18%;
+    animation-duration: 7s;
+}
+
+.floating-particles span:nth-child(3) {
+    left: 28%;
+    animation-duration: 10s;
+}
+
+.floating-particles span:nth-child(4) {
+    left: 40%;
+    animation-duration: 6s;
+}
+
+.floating-particles span:nth-child(5) {
+    left: 50%;
+    animation-duration: 12s;
+}
+
+.floating-particles span:nth-child(6) {
+    left: 62%;
+    animation-duration: 8s;
+}
+
+.floating-particles span:nth-child(7) {
+    left: 74%;
+    animation-duration: 7s;
+}
+
+.floating-particles span:nth-child(8) {
+    left: 82%;
+    animation-duration: 9s;
+}
+
+.floating-particles span:nth-child(9) {
+    left: 90%;
+    animation-duration: 11s;
+}
+
+.floating-particles span:nth-child(10) {
+    left: 95%;
+    animation-duration: 6s;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(120vh) scale(0.8);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(-20vh) scale(1);
+        opacity: 0;
+    }
+}
+
+.port-name {
+    padding: 0;
+    font-size: 7rem;
+}
+
+#home .col-lg-6 {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+#home .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    max-width: 100% !important;
+    /* adjust this to control left edge distance */
+}
+
+.hero-side-glow {
+    position: absolute;
+    right: 57%;
+    top: 0%;
+    width: 480px;
+    /* make larger */
+    opacity: 0.35;
+    /* transparency */
+    filter: blur(18px);
+    /* soft glow look */
+    pointer-events: none;
+    /* do not interact with cursor */
+}
+
+
+
+
+
+
+/* ................................... */
+
 .header {
     color: whitesmoke;
     margin: 5rem 2rem;
-    /* background-color: #29AB87; */
+    background-color: #29AB87;
+
 }
 
 .cv-btn {
@@ -73,13 +247,19 @@ variables
 /* BEGINNING OF NAV  */
 .nav {
     /* background-color: aliceblue; */
-    background: transparent;
+    /* background: transparent; */
+    background-color: #11654d;
     height: 60px;
     display: flex;
     justify-content: space-between;
     padding: 1rem;
 
 
+
+}
+
+#home {
+    background-color: #11654d;
 }
 
 .nav-span {
@@ -93,6 +273,10 @@ variables
     color: rgb(206, 205, 205);
     font-size: 1.2rem;
 
+}
+
+.logo a {
+    text-decoration: none;
 }
 
 .navbar {
@@ -213,8 +397,7 @@ variables
 
 /* END OF NAV */
 
-
-/* END OF HEADER STYLING */
+/* END OF new HEADER STYLING */
 
 /* BEGINNING OF TECHNICAL SKILLS */
 .one {
@@ -256,38 +439,79 @@ variables
 .pro-img {
     max-width: 100%;
     height: auto;
+    display: block;
+    border-radius: 12px;
+    transition: transform 0.6s ease;
 }
 
-.show-img-div {}
+/* Image Wrapper */
+.show-img-div {
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
 
 .portfolio-section {
-    color: whitesmoke;
+    /* color: whitesmoke; */
     margin: 4rem 0;
-    padding: 2rem 2rem;
+    padding: 2rem 6rem;
+    /* background-color: #000000; */
 }
 
 .project-info {
-    background: #29AB87;
+    /* background: #29AB87; */
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 1rem 0;
-    background: #000000;
-    background: linear-gradient(to right, #000000, #434343);
+    /* background: #000000; */
+    /* background: linear-gradient(to right, #000000, #434343); */
     box-shadow: 2px 2px 4px rgba(20, 200, 145, .4);
-    border-radius: 5px;
 
+    /* new */
+    /* background: rgba(255, 255, 255, 0.04); */
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 14px;
+    padding: 1rem;
+    backdrop-filter: blur(8px);
+    transition: transform 0.45s cubic-bezier(.19, .68, .37, 1),
+        box-shadow 0.45s cubic-bezier(.19, .68, .37, 1);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+
+}
+
+/* Lift on Hover */
+.project-info:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 40px rgba(0, 0, 0, 0.45);
+    border-color: #29AB87;
+}
+
+.project-info:hover .pro-img {
+    transform: scale(1.08);
 }
 
 .projectinf0-h2 {
 
     margin-top: 2rem;
+    font-size: 1.1rem;
+    color: #2e2d2d;
+    margin-top: 0.5rem;
+    line-height: 1.4;
+    letter-spacing: 0.5px;
 
 }
 
 .projectinf0-h22 {
     margin-top: 0.5rem;
     color: #29AB87;
+    font-size: 0.9rem;
+    margin-top: 0.2rem;
+    line-height: 1.4;
+    letter-spacing: 0.5px;
+
 
 }
 
@@ -296,19 +520,29 @@ variables
     margin-top: 1rem;
 
     text-transform: capitalize;
-
-}
-
-.projectinf0-p {
-    text-align: sstart;
-    margin-top: 1rem;
-
+    font-size: 0.9rem;
+    margin-top: 0.8rem;
+    color: #2e2d2d;
     text-transform: capitalize;
+    /* display: flex; */
+    align-items: center;
+    gap: 8px;
+    line-height: 1.4;
+    letter-spacing: 0.5px;
+
+
+
 }
+
+
 
 .projectinf0-pp {
 
     margin: 1rem 0;
+    font-size: 0.9rem;
+    color: #2e2d2d;
+    margin-top: 0.6rem;
+    line-height: 1.4;
 
 
     /* color: aqua; */
@@ -334,6 +568,50 @@ variables
     text-align: center;
 
 }
+
+.project-title-wrap {
+    width: 100%;
+    max-width: 95%;
+    /* full width inside section */
+    margin: 4rem auto;
+
+}
+
+.project-heading {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #11654d;
+    margin-bottom: 1rem;
+    /* padding: 0rem 6rem; */
+}
+
+.project-heading-line {
+    width: 100%;
+    /* matches inner width */
+    height: 2px;
+    background: #11654d;
+    /* padding: 0rem 0rem; */
+}
+
+/* newww */
+
+
+
+/* TITLE */
+
+
+/* SMALL DESCRIPTION */
+
+
+
+
+
+
+
+
+/* gpt suggested begins ........................ */
+
+
 
 /* END OF PROJECTS */
 
@@ -368,16 +646,102 @@ variables
     line-height: 24px;
 }
 
+/* ......................... */
+.about-section {
+    padding: 120px 0;
+    background: #121212;
+    background-color: #11654d;
+    /* smooth dark like crafto */
+    color: #fff;
+
+}
+
+.container-about {
+    max-width: 1150px;
+    margin: auto;
+    padding: 0 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.about-text {
+    max-width: 540px;
+}
+
+.about-tag {
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #29ab87;
+    margin-bottom: 14px;
+}
+
+.about-title {
+    font-size: 3.2rem;
+    margin-bottom: 18px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.about-description {
+    font-size: 18px;
+    color: #d6d6d6;
+    line-height: 1.6;
+}
+
+/* Floating Glow Blob (like Crafto) */
+.about-blob {
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    background: radial-gradient(rgba(41, 171, 135, 0.65), transparent 70%);
+    filter: blur(48px);
+    pointer-events: none;
+    position: relative;
+    background: radial-gradient(rgba(41, 171, 135, 0.6),
+            /* #29AB87 but soft */
+            transparent 70%);
+
+
+
+}
+
+.about {
+    position: relative;
+    overflow: hidden;
+    /* prevents glow from causing scrollbars */
+}
+
+
+
+/* Mobile responsive */
+@media(max-width: 992px) {
+    .container-about {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .about-blob {
+        width: 300px;
+        height: 300px;
+    }
+}
+
 /* END OF ABOUT */
 
 /* BEGINNING OF CONTACT */
 .contact {
     /* background-color:  #1b1a1a; */
 
-    color: whitesmoke;
+    color: rgb(39, 38, 38);
     margin: 0 2rem;
     margin-top: 5rem;
     text-align: center;
+
+    /* background-color: #11654d; */
     /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
 }
 
@@ -389,23 +753,26 @@ input {
     width: 90%;
     margin: 1rem 0;
     height: 30px;
-    background-color: #292828;
+    /* background-color: #292828; */
     color: white;
     font-size: 1rem;
     padding: 10px;
     border-radius: 5px;
+    border: 2px solid #a4a1a1;
 
 }
 
 .textarea {
     width: 90%;
     margin-bottom: 1rem;
-    background-color: #292828;
+    /* background-color: #292828; */
     color: white;
     font-size: 1rem;
     padding: 10px;
     resize: none;
     border-radius: 5px;
+    border: 2px solid #a4a1a1;
+    /* thin, light-gray border */
 }
 
 .contact-p {
@@ -414,6 +781,7 @@ input {
     text-transform: capitalize;
     font-weight: 400;
     line-height: 24px;
+
 
 }
 
@@ -431,6 +799,7 @@ input {
     margin-bottom: 2rem;
     border-radius: 5px;
     transition: all 0.3s ease-out;
+    background-color: #11654d;
 }
 
 .contact-btn:hover {
@@ -544,6 +913,570 @@ input {
 
 /* END OF ARITICLES */
 
+/* begin tech  */
+/* tech line styling begins */
+
+/* tech line styling ends */
+.skills-section {
+    width: 88%;
+    max-width: 1200px;
+    margin: 6rem auto;
+    text-align: center;
+    color: #282727;
+    margin-top: 2rem;
+    padding-top: 5rem;
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+    transition: opacity 1.3s ease-out, transform 1.3s ease-out;
+
+
+}
+
+.skills-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.skills-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2.5rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 1.8rem;
+    margin-top: 3rem;
+}
+
+.skill-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    padding: 1.3rem 1rem;
+    border-radius: 14px;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform .35s ease, border-color .35s ease, background .35s ease;
+}
+
+.skill-item img {
+    width: 38px;
+    height: 38px;
+    margin-bottom: .8rem;
+}
+
+.skill-item span {
+    font-size: .95rem;
+    letter-spacing: .5px;
+}
+
+.skill-item:hover {
+    transform: translateY(-6px);
+    background: rgba(255, 255, 255, 0.10);
+    border-color: #29AB87;
+}
+
+/* iconn style */
+/* HTML (#E34F26) */
+.skill-item.html img {
+    filter: invert(40%) sepia(86%) saturate(1574%) hue-rotate(345deg) brightness(95%) contrast(96%);
+}
+
+/* CSS (#1572B6) */
+.skill-item.css img {
+    filter: invert(39%) sepia(86%) saturate(1772%) hue-rotate(188deg) brightness(92%) contrast(95%);
+}
+
+/* JavaScript (#F7DF1E) */
+.skill-item.js img {
+    filter: invert(88%) sepia(19%) saturate(656%) hue-rotate(1deg) brightness(103%) contrast(96%);
+}
+
+/* React (#61DAFB) */
+.skill-item.react img {
+    filter: invert(76%) sepia(18%) saturate(868%) hue-rotate(158deg) brightness(101%) contrast(102%);
+}
+
+/* Node.js (#339933) */
+.skill-item.node img {
+    filter: invert(55%) sepia(9%) saturate(2832%) hue-rotate(71deg) brightness(93%) contrast(85%);
+}
+
+/* start new tech style  */
+.skills-section {
+    width: 88%;
+    max-width: 1200px;
+    margin: 6rem auto;
+    text-align: center;
+    color: #282727;
+    margin-top: 2rem;
+}
+
+.skills-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2.5rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 1.8rem;
+    margin-top: 3rem;
+}
+
+.skill-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    padding: 1.3rem 1rem;
+    border-radius: 14px;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform .35s ease, border-color .35s ease, background .35s ease, box-shadow .35s ease;
+}
+
+.skill-item img {
+    width: 38px;
+    height: 38px;
+    margin-bottom: .8rem;
+    filter: grayscale(100%) brightness(0.8);
+    /* 👈 default neutral look */
+    transition: filter 0.4s ease, transform 0.3s ease;
+}
+
+.skill-item span {
+    font-size: .95rem;
+    letter-spacing: .5px;
+}
+
+.skill-item:hover {
+    transform: translateY(-6px);
+    background: rgba(255, 255, 255, 0.10);
+    border-color: #29AB87;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* ICON COLORS ONLY ON HOVER */
+
+/* HTML (#E34F26) */
+.skill-item.html5:hover img {
+    filter: invert(40%) sepia(86%) saturate(1574%) hue-rotate(345deg) brightness(95%) contrast(96%);
+}
+
+/* CSS (#1572B6) */
+.skill-item.css:hover img {
+    filter: invert(39%) sepia(86%) saturate(1772%) hue-rotate(188deg) brightness(92%) contrast(95%);
+}
+
+/* JavaScript (#F7DF1E) */
+.skill-item.javascript:hover img {
+    filter: invert(88%) sepia(19%) saturate(656%) hue-rotate(1deg) brightness(103%) contrast(96%);
+}
+
+/* React (#61DAFB) */
+.skill-item.react:hover img {
+    filter: invert(76%) sepia(18%) saturate(868%) hue-rotate(158deg) brightness(101%) contrast(102%);
+}
+
+/* Node.js (#339933) */
+.skill-item.node:hover img {
+    filter: invert(55%) sepia(9%) saturate(2832%) hue-rotate(71deg) brightness(93%) contrast(85%);
+}
+
+/* hover effect */
+.skills-section {
+    width: 88%;
+    max-width: 1200px;
+    margin: 6rem auto;
+    text-align: center;
+    color: #282727;
+    margin-top: 2rem;
+}
+
+.skills-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2.5rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 1.8rem;
+    margin-top: 3rem;
+}
+
+.skill-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    padding: 1.3rem 1rem;
+    border-radius: 14px;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.35s ease;
+}
+
+.skill-item img {
+    width: 38px;
+    height: 38px;
+    margin-bottom: 0.8rem;
+    transition: filter 0.35s ease, transform 0.3s ease;
+}
+
+.skill-item img:hover {
+    color: #d5dedb;
+}
+
+.skill-item span {
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    transition: color 0.35s ease;
+}
+
+/* Hover base */
+.skill-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    border-color: transparent;
+    /* color: #fff; */
+}
+
+/* === Brand Colors on Hover === */
+.skill-item.html:hover {
+    background-color: #E34F26;
+
+    color: #d5dedb;
+    color: whitesmoke;
+}
+
+.skill-item.css:hover {
+    background-color: #1572B6;
+    color: #d5dedb;
+    color: whitesmoke;
+}
+
+
+.skill-item.js:hover {
+    background-color: #F7DF1E;
+    color: #000;
+    color: whitesmoke;
+    /* text readable */
+}
+
+.skill-item.react:hover {
+    background-color: #61DAFB;
+    color: whitesmoke;
+}
+
+
+
+.skill-item.react:hover img {
+    filter: none;
+    /* no filter needed */
+}
+
+
+.skill-item.node:hover {
+    background-color: #339933;
+}
+
+/* === Icon color: white on hover === */
+.skill-item:hover img {
+    filter: brightness(0) invert(1);
+}
+
+/* new hover */
+/* Redux (#764ABC) */
+.skill-item.redux:hover {
+    background-color: #764ABC;
+    color: whitesmoke;
+}
+
+/* Tailwind (#38B2AC) */
+.skill-item.tailwind:hover {
+    background-color: #38B2AC;
+    color: whitesmoke;
+}
+
+/* Bootstrap (#7952B3) */
+.skill-item.bootstrap:hover {
+    background-color: #7952B3;
+    color: whitesmoke;
+}
+
+/* Webpack (#8DD6F9) */
+.skill-item.webpack:hover {
+    background-color: #8DD6F9;
+    color: #000;
+}
+
+/* GitHub (#181717) */
+.skill-item.github:hover {
+    background-color: #181717;
+    color: whitesmoke;
+}
+
+/* Cypress (#17202C) */
+.skill-item.cypress:hover {
+    background-color: #17202C;
+    color: whitesmoke;
+}
+
+/* Jira (#0052CC) */
+.skill-item.jira:hover {
+    background-color: #0052CC;
+    color: whitesmoke;
+}
+
+/* TestLink (#5B9BD5) */
+.skill-item.testlink:hover {
+    background-color: #FF6C37;
+    color: whitesmoke;
+}
+
+/* ShadCN (light green, #29AB87) */
+.skill-item.shadcn:hover {
+    background-color: #29AB87;
+    color: whitesmoke;
+}
+
+/* Vercel (#000000) */
+.skill-item.vercel:hover {
+    background-color: #000000;
+    color: whitesmoke;
+}
+
+/* Icon color on hover for all */
+.skill-item:hover img {
+    filter: brightness(0) invert(1);
+}
+
+
+/* staert tech slider */
+
+.skills-slider {
+    width: 100%;
+    margin-top: 3rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide-track {
+    display: flex;
+    width: calc(200%);
+    animation: scroll 14s linear infinite;
+    gap: 3rem;
+}
+
+.slide {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    opacity: .85;
+    font-size: 0.95rem;
+}
+
+.slide img {
+    width: 26px;
+    height: 26px;
+}
+
+/* another style */
+/* src/components/TechSlider.css */
+
+.skills-slider {
+    width: 100%;
+    margin-top: 3rem;
+    overflow: hidden;
+    position: relative;
+    background: transparent;
+    /* change if you want a bg */
+    padding: 0.6rem 0;
+}
+
+.slide-track {
+    display: flex;
+    align-items: center;
+    /* no explicit width — we measure in JS so it adapts perfectly */
+    will-change: transform;
+    transform: translateX(0);
+}
+
+.slide {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    opacity: 0.95;
+    font-size: 0.95rem;
+    padding: 0.2rem 1rem;
+    /* small clickable area */
+    flex: 0 0 auto;
+    /* IMPORTANT: prevents shrinking */
+    user-select: none;
+}
+
+/* icon size and preserving original color */
+.slide img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    display: block;
+    /* if your SVGs are monochrome and you want to tint them, you'd use filter / fill.
+     But for brand-colored SVGs in public folder, the color will be kept. */
+    transition: transform 0.24s ease, filter 0.24s ease;
+}
+
+/* small hover effect */
+.slide:hover img {
+    transform: scale(1.18);
+    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.28));
+}
+
+.skill-name {
+    font-weight: 600;
+    letter-spacing: 0.01em;
+}
+
+/* pause on hover handled in component; fallback can be CSS-only */
+.skills-slider:hover .slide-track {
+    /* nothing here: animation controlled by JS, but keeping this for clarity */
+}
+
+/* responsive tweaks */
+@media (max-width: 640px) {
+    .slide img {
+        width: 22px;
+        height: 22px;
+    }
+
+    .slide {
+        padding: 0.2rem 0.6rem;
+        gap: 0.45rem;
+    }
+}
+
+.skills-slider {
+    width: 100%;
+    margin-top: 3rem;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Important: make the track as long as needed and prevent wrapping */
+.slide-track {
+    display: flex;
+    flex-wrap: nowrap;
+    animation: scroll 45s linear infinite;
+    /* 45s = slower scroll */
+}
+
+/* Adjust each item’s spacing */
+.slide {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-right: 3rem;
+    opacity: 0.9;
+    font-size: 0.95rem;
+    flex-shrink: 0;
+    /* Prevents shrinking — key to smooth loop */
+}
+
+.slide img {
+    width: 26px;
+    height: 26px;
+    transition: transform 0.3s ease;
+}
+
+/* Optional hover scale */
+.slide:hover img {
+    transform: scale(1.15);
+}
+
+/* Smooth continuous scrolling */
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Optional: Pause on hover */
+.skills-slider:hover .slide-track {
+    animation-play-state: paused;
+}
+
+
+/* Loop animation */
+/* @keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+} */
+
+/* src/TechSection.css */
+/* .tech-section {
+    width: 100%;
+    overflow: hidden;
+   
+    padding: 1.5rem 0;
+}
+
+.tech-slider {
+    display: flex;
+    width: max-content;
+    animation: scroll 20s linear infinite;
+}
+
+.tech-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 2rem;
+}
+
+.tech-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+}
+
+.tech-item span {
+    font-size: 0.9rem;
+    font-weight: 600;
+} */
+
+/* Keyframes for continuous scrolling */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+
+
 @media only screen and (min-width:768px) {
 
     /* BEGINNING OF HEADER STYLING */
@@ -572,6 +1505,7 @@ input {
 
     .header-section {
         margin: 0 3rem;
+        background-color: #d7d2d2;
         /* background-color: #c0bdbd; */
     }
 
@@ -657,8 +1591,9 @@ input {
 
     .logo {
         position: absolute;
-        top: 4%;
-        left: 5%;
+        top: 7%;
+        left: 10%;
+        /* background-color: #0052CC; */
 
 
     }
@@ -739,8 +1674,10 @@ input {
     .project-parent {
 
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         gap: 1rem;
+        /* margin-top: 3rem; */
+        /* margin-bottom: 13rem; */
 
     }
 
@@ -748,6 +1685,34 @@ input {
 
         margin: 1rem;
     }
+
+
+
+    .project-header-wrapper {
+        width: 90%;
+
+        margin: 0 auto;
+
+    }
+
+    .project-title {
+        display: block;
+        font-size: 1rem;
+        font-weight: 600;
+        color: #11654d;
+        margin-bottom: 6px;
+        text-align: left;
+        margin-bottom: 0.7rem;
+        /* <-- important (not centered) */
+    }
+
+    .project-heading-line {
+        width: 100%;
+
+        height: 2px;
+        background: #11654d;
+    }
+
 
     /* END OF PROJECT STYLING */
 
@@ -809,4 +1774,31 @@ input {
 
     /* END OF ABOUT STYLING */
 
+}
+
+/* Stop old animation engine from overriding Framer Motion */
+[data-anime],
+[data-anime] *,
+[data-animate],
+.appear,
+.anime {
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+.no-gutter {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.hero-wrapper {
+    position: absolute;
+    display: flex;
+    /* justify-content: space-between; */
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* background-color: #0052CC; */
+    width: 70%;
+    padding: 0rem 2rem;
 }

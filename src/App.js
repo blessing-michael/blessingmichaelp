@@ -1,29 +1,38 @@
 import React from 'react'
-import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Header from './Header'
 import Projects from './Projects.js'
 import About from './About'
+import Tech from './Tech'
+
 import Contact from './Contact'
 import Footer from './Footer'
 import Nav from './Nav'
 import Articles from './Articles'
+import MagicCursor from "./components/MagicCursor";
+import GlowBlob from "./components/GlowBlob";
 
 function App() {
   return (
     <div>
 
+      <MagicCursor />
+      <GlowBlob />
+      <Nav />
 
-<Nav/>
-<Header/>
-<Projects/>
-{/* <Articles/> */}
-      
-      <About/>
-     <Contact/>
-     <Footer/>
-     
+      <Header />
+      <Tech />
+      <Projects />
+      {/* <Articles/> */}
+      <MagicCursor />
+      <GlowBlob />
+
+      <About />
+      <Contact />
+      <Footer />
+
       {/* <Router> */}
-     
+
       {/* <Routes> */}
       {/* <Route path="/" element={
         }/>
@@ -35,14 +44,14 @@ function App() {
       <Contact/>}/>
         <Route path="/footer" element={
        <Footer/>}/> */}
-        
-      {/* </Routes> */}
-     
 
-     
+      {/* </Routes> */}
+
+
+
 
       {/* </Router> */}
-     
+
     </div>
   )
 }
